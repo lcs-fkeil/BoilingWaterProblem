@@ -21,20 +21,25 @@ struct ContentView: View {
     
     var feedback: String {
         if currentPressure < 100 {
-            return "You are above sea level"
+            return "You are above sea level!"
         } else if currentPressure > 100 {
-            return "You are below sea level"
+            return "You are below sea level!"
         } else if currentPressure == 100 {
-            return "You are at sea level"
+            return "You are at sea level!"
         }
         
-        return "I don't know where you are"
+        return "I don't know where you are!"
         
     }
     
     var body: some View {
         
-        VStack {
+        VStack (alignment: .leading){
+            
+            Text ("Current Temperature:")
+                .font(.title2)
+                .padding(.vertical, 5)
+            
             Slider(value: $temperature,
                    in: 80...200,
                    step: 1,
@@ -48,20 +53,35 @@ struct ContentView: View {
                 Text("200 °C")
             })
             
-            Text("\(String(format: "%.1f", temperature)) °C")
-                .font(.largeTitle)
+            HStack {
+                Spacer()
+                Text("\(String(format: "%.0f", temperature)) °C")
+                    .font(.largeTitle)
                 .bold()
+                Spacer()
+            }
             
             Text("Current Pressure:")
                 .font(.title2)
+                .padding(.vertical, 5)
             
-            Text("\(String(format: "%.1f", currentPressure)) kPa")
-                .font(.largeTitle)
+            HStack {
+                Spacer()
+                Text("\(String(format: "%.0f", currentPressure)) kPa")
+                    .font(.largeTitle)
                 .bold()
+                Spacer()
+            }
             
-            Text (feedback)
-                .italic()
+            HStack {
+                Spacer()
+                Text (feedback)
+                    .italic()
                 .padding()
+                Spacer()
+            }
+            
+            Spacer()
         }
         .navigationTitle("Boiling water")
         .padding()
