@@ -57,7 +57,7 @@ struct ContentView: View {
                 Spacer()
                 Text("\(String(format: "%.0f", temperature)) °C")
                     .font(.largeTitle)
-                .bold()
+                    .bold()
                 Spacer()
             }
             
@@ -69,7 +69,7 @@ struct ContentView: View {
                 Spacer()
                 Text("\(String(format: "%.0f", currentPressure)) kPa")
                     .font(.largeTitle)
-                .bold()
+                    .bold()
                 Spacer()
             }
             
@@ -77,8 +77,21 @@ struct ContentView: View {
                 Spacer()
                 Text (feedback)
                     .italic()
-                .padding()
+                    .padding()
                 Spacer()
+            }
+            
+            // Reaction Animation
+            
+            ZStack {
+                LottieView(animationNamed: "42818-beach")
+                    .opacity(feedback == "You are at sea level!" ? 1.0 : 0.0)
+                
+                LottieView(animationNamed: "81201-mountains")
+                    .opacity(feedback == "You are above sea level!" ? 1.0 : 0.0)
+                
+                LottieView(animationNamed: "87685-submarine")
+                    .opacity(feedback == "You are below sea level!" ? 1.0 : 0.0)
             }
             
             Spacer()

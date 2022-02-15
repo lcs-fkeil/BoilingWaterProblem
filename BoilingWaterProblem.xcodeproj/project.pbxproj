@@ -11,6 +11,11 @@
 		62DC3B1727BC09DD00CAB6C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DC3B1627BC09DD00CAB6C9 /* ContentView.swift */; };
 		62DC3B1927BC09E100CAB6C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DC3B1827BC09E100CAB6C9 /* Assets.xcassets */; };
 		62DC3B1C27BC09E100CAB6C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DC3B1B27BC09E100CAB6C9 /* Preview Assets.xcassets */; };
+		62DC3B2527BC167A00CAB6C9 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 62DC3B2427BC167A00CAB6C9 /* Lottie */; };
+		62DC3B2727BC168D00CAB6C9 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DC3B2627BC168D00CAB6C9 /* LottieView.swift */; };
+		62DC3B2A27BC188400CAB6C9 /* 42818-beach.json in Resources */ = {isa = PBXBuildFile; fileRef = 62DC3B2927BC188400CAB6C9 /* 42818-beach.json */; };
+		62DC3B2C27BC1A1E00CAB6C9 /* 81201-mountains.json in Resources */ = {isa = PBXBuildFile; fileRef = 62DC3B2B27BC1A1E00CAB6C9 /* 81201-mountains.json */; };
+		62DC3B2E27BC1A2500CAB6C9 /* 87685-submarine.json in Resources */ = {isa = PBXBuildFile; fileRef = 62DC3B2D27BC1A2500CAB6C9 /* 87685-submarine.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,10 @@
 		62DC3B1627BC09DD00CAB6C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		62DC3B1827BC09E100CAB6C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62DC3B1B27BC09E100CAB6C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		62DC3B2627BC168D00CAB6C9 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		62DC3B2927BC188400CAB6C9 /* 42818-beach.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "42818-beach.json"; sourceTree = SOURCE_ROOT; };
+		62DC3B2B27BC1A1E00CAB6C9 /* 81201-mountains.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "81201-mountains.json"; sourceTree = SOURCE_ROOT; };
+		62DC3B2D27BC1A2500CAB6C9 /* 87685-submarine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "87685-submarine.json"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62DC3B2527BC167A00CAB6C9 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				62DC3B1427BC09DD00CAB6C9 /* BoilingWaterProblemApp.swift */,
+				62DC3B2227BC148400CAB6C9 /* Animations */,
+				62DC3B2827BC174800CAB6C9 /* Helpers */,
 				62DC3B1627BC09DD00CAB6C9 /* ContentView.swift */,
 				62DC3B1827BC09E100CAB6C9 /* Assets.xcassets */,
 				62DC3B1A27BC09E100CAB6C9 /* Preview Content */,
@@ -65,6 +77,24 @@
 				62DC3B1B27BC09E100CAB6C9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		62DC3B2227BC148400CAB6C9 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				62DC3B2927BC188400CAB6C9 /* 42818-beach.json */,
+				62DC3B2B27BC1A1E00CAB6C9 /* 81201-mountains.json */,
+				62DC3B2D27BC1A2500CAB6C9 /* 87685-submarine.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		62DC3B2827BC174800CAB6C9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				62DC3B2627BC168D00CAB6C9 /* LottieView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +113,9 @@
 			dependencies = (
 			);
 			name = BoilingWaterProblem;
+			packageProductDependencies = (
+				62DC3B2427BC167A00CAB6C9 /* Lottie */,
+			);
 			productName = BoilingWaterProblem;
 			productReference = 62DC3B1127BC09DD00CAB6C9 /* BoilingWaterProblem.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +144,9 @@
 				Base,
 			);
 			mainGroup = 62DC3B0827BC09DD00CAB6C9;
+			packageReferences = (
+				62DC3B2327BC167A00CAB6C9 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 62DC3B1227BC09DD00CAB6C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +163,9 @@
 			files = (
 				62DC3B1C27BC09E100CAB6C9 /* Preview Assets.xcassets in Resources */,
 				62DC3B1927BC09E100CAB6C9 /* Assets.xcassets in Resources */,
+				62DC3B2E27BC1A2500CAB6C9 /* 87685-submarine.json in Resources */,
+				62DC3B2A27BC188400CAB6C9 /* 42818-beach.json in Resources */,
+				62DC3B2C27BC1A1E00CAB6C9 /* 81201-mountains.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62DC3B1727BC09DD00CAB6C9 /* ContentView.swift in Sources */,
+				62DC3B2727BC168D00CAB6C9 /* LottieView.swift in Sources */,
 				62DC3B1527BC09DD00CAB6C9 /* BoilingWaterProblemApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +381,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		62DC3B2327BC167A00CAB6C9 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		62DC3B2427BC167A00CAB6C9 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62DC3B2327BC167A00CAB6C9 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 62DC3B0927BC09DD00CAB6C9 /* Project object */;
 }
